@@ -4,3 +4,5 @@
 *.db
 *.json
 *.sqlite
+*.xml
+*.iml
