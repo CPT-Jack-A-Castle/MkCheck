@@ -17,9 +17,12 @@
 <br />
 
 # *MkCheck*
-<strong>*s1l3nt78*</strong>
+<strong><em>s1l3nt78</em></strong>
 <br>
-<em>Because exploitation is fun</em>
+<strong><em>~The Dead Bunny Club~</em></strong>
+<br />
+*Because exploitation is fun*
+<br>
 <br>
 
 # *IMPORTANT*
