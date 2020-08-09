@@ -627,8 +627,8 @@ update(){
 cred_check(){
 	USER=$(cat /opt/MkCheck/scripts/miko.py | grep 'username =')
 	PASS=$(cat /opt/MkCheck/scripts/miko.py | grep 'password =')
-	echo -e "${YLW}Current Username Value: ${ORNG}${USER}"
-	echo -e "${YLW}Current Password Value: ${ORNG}${PASS}${NC}"
+	echo -e "${YLW}Current ${ORNG}${USER}"
+	echo -e "${YLW}Current ${ORNG}${PASS}${NC}"
 }
 
 ################################################################################
