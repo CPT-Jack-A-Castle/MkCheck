@@ -7,7 +7,7 @@
 authbox(){
 	for name in `cat /opt/MkCheck/files/rsf.txt`
 		do
-			WB=$(sudo python3 scripts/winbox.py ${name})
+			WB=$(sudo python3 winbox.py ${name})
 			echo "${WB}" >> /opt/MkCheck/results/RSF/${SESSION}/WinBox.${name}
 			echo "${WB}" >> /opt/MkCheck/results/RSF/${SESSION}/WinBox.final
 			echo "${WB}"
@@ -29,7 +29,7 @@ jailer(){
 while getopts "aj" options; do            	            # Loop: Get the next option;
 	case "${options}" in
         a)
-			cd /opt/MkCheck
+			cd /opt/MkCheck/scripts
             authbox
             ;;
 
