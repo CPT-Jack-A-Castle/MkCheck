@@ -7,7 +7,7 @@
 authbox(){
 	for name in `cat /opt/MkCheck/files/rsf.txt`
 		do
-			WB=$(sudo python3 winbox.py ${name})
+			WB=$(sudo python3 scripts/winbox.py ${name})
 			echo "${WB}" >> /opt/MkCheck/results/RSF/${SESSION}/WinBox.${name}
 			echo "${WB}" >> /opt/MkCheck/results/RSF/${SESSION}/WinBox.final
 			echo "${WB}"
