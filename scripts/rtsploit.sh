@@ -29,10 +29,12 @@ jailer(){
 while getopts "aj" options; do            	            # Loop: Get the next option;
 	case "${options}" in
         a)
+			cd /opt/MkCheck
             authbox
             ;;
 
         j)
+			cd /root/routersploit
             jailer
             ;;
 

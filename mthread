@@ -737,17 +737,17 @@ jailer(){
 # RouterSploit Runtime #
 ########################
 rtsploit(){
-	cd /root/routersploit
-	#########################################
+	
 	#########################################
 	#  winbox_auth_bypass_creds_disclosure  #
 	#########################################
 	xterm -e bash scripts/rtsploit.sh -a &
-	########################
+	
 	########################
 	#  routeros_jailbreak  #
 	########################
 	xterm -e bash scripts/rtsploit.sh -j &
+	
 	echo -e "${ORNG}When both xterm windows are done, please hit ${YLW}enter${NC}"
 	read ENDRSF
 	main
