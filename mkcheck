@@ -511,6 +511,8 @@ bytheway(){
 rtsploit(){
 	cd /opt/MkCheck
 	python3 scripts/get/rsf.py
+	echo -e "${ORNG}Would you like to run the RouterOS JailBreak check aswell? (y/n)${NC}"
+	read OSJB
 	for name in `cat /opt/MkCheck/files/rsf.txt`
 		do
 			#########################################
@@ -527,12 +529,14 @@ rtsploit(){
 			########################
 			#  routeros_jailbreak  #
 			########################
-			cd /root/routersploit
-			JAIL=$(sudo python3 rsf.py -m exploits/routers/mikrotik/routeros_jailbreak -s "target ${name}")
-			echo "${JAIL}" >> /opt/MkCheck/results/RSF/${SESSION}/${name}.results
-			echo "${JAIL}" >> /opt/MkCheck/results/RSF/${SESSION}/final.results
-			echo "${JAIL}"
-			echo "======================================================================" >> /opt/MkCheck/results/RSF/${SESSION}/final.results
+			if [[ ${OSJB} == "y" ]]; then
+				cd /root/routersploit
+				JAIL=$(sudo python3 rsf.py -m exploits/routers/mikrotik/routeros_jailbreak -s "target ${name}")
+				echo "${JAIL}" >> /opt/MkCheck/results/RSF/${SESSION}/${name}.results
+				echo "${JAIL}" >> /opt/MkCheck/results/RSF/${SESSION}/final.results
+				echo "${JAIL}"
+				echo "======================================================================" >> /opt/MkCheck/results/RSF/${SESSION}/final.results
+			fi
 		done
 }
 

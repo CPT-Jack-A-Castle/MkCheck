@@ -737,7 +737,8 @@ jailer(){
 # RouterSploit Runtime #
 ########################
 rtsploit(){
-	
+	echo -e "${ORNG}Would you like to run the RouterOS JailBreak check aswell? (y/n)${NC}"
+	read OSJB
 	#########################################
 	#  winbox_auth_bypass_creds_disclosure  #
 	#########################################
@@ -746,8 +747,9 @@ rtsploit(){
 	########################
 	#  routeros_jailbreak  #
 	########################
-	xterm -e bash scripts/rtsploit.sh -j &
-	
+	if [[ ${OSJB} == "y" ]]; then
+		xterm -e bash scripts/rtsploit.sh -j &
+	fi
 	echo -e "${ORNG}When both xterm windows are done, please hit ${YLW}enter${NC}"
 	read ENDRSF
 	main
