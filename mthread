@@ -741,7 +741,7 @@ rtsploit(){
 	#########################################
 	#  winbox_auth_bypass_creds_disclosure  #
 	#########################################
-	xterm -e bash scripts/rtsploit.sh -a &
+	xterm -e sudo bash scripts/rtsploit.sh -a &
 	
 	########################
 	#  routeros_jailbreak  #

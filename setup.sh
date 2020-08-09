@@ -76,8 +76,8 @@ else
 	mv btw -t /opt/MkCheck/scripts
 fi
 
+chmod +x /opt/MkCheck --recursive
 cd /opt/MkCheck
-chmod +x mkcheck mthread scripts/thread.sh
 # Path Options
 echo -e "${YLW}Would you like to add MkCheck to path to run it from anywhere?${LBBLUE}(y/n)${NC}"
 read LOPT
