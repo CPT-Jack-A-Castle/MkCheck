@@ -131,9 +131,10 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
  <br />
  Once installed run the following commands from windows terminal:
  
- 	echo "export DISPLAY=localhost:0.0" >> ~/.bashrc
+ 	echo "export DISPLAY=<your local ip>:0.0" >> ~/.bashrc
 	source ~/.bashrc
 	
+<strong>Disable Access Control</strong><em> must be checked</em>	
  <br />
  <br /> 
 
