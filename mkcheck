@@ -258,6 +258,7 @@ session_check(){
 		if [[ ${RE} == "" ]]; then
 			echo -e "${URED}Please enter an IP block to start scanning first${NC}"
 			echo -e "${RED}Please make first target end with 0 (${UBLUE}eg. a.b.c.0${NC}${RED})${NC}"
+			sleep 5
 			sudo nano /opt/MkCheck/files/tiks.txt
 		fi
 
@@ -268,10 +269,11 @@ session_check(){
 
 		RR=$(cat /opt/MkCheck/files/tiks.txt | grep "a.b.c.0")
 		if [[ ${RR} == "a.b.c.0" ]]; then
-			sudo rm /opt/MkCheck/files/tiks.txt
-			echo -e "${URED}Please enter an IP block to start scanning first${NC}"
-			echo -e "${RED}Please make first target end with 0 (${UBLUE}eg. a.b.c.0${NC}${RED})${NC}"
-			nano /opt/MkCheck/files/tiks.txt
+			echo -e "${URED}Please enter the first 3 numbers of the target IP ${NC}"
+			echo -e "${RED}eg. ${UBLUE} a.b.c / 12.34.5${NC}"
+			read TIP
+			REP='a.b.c'
+			sudo sed -i "s/${REP}/${TIP}/g"
 			if [[ -f '/opt/MkCheck/files/small_file*' ]]; then
 				rm files/small_file*
 			fi
