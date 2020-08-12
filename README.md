@@ -125,15 +125,16 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
 <br />
  <strong><em>mthread</em></strong> will not as it relies on external xterm windows.
  <br />
- <strong>mthread</strong> works on windows, if you install VcXsrv (xserver application for windows), this allows xterm windows to launch
+ <strong><em>mthread</em></strong> works on windows, if you install VcXsrv (xserver application for windows), this allows xterm windows to launch
  <br />
  Download VcXsrv from <a href="https://ufpr.dl.sourceforge.net/project/vcxsrv/vcxsrv/1.20.8.1/vcxsrv-64.1.20.8.1.installer.exe">here.</a>
  <br />
  Once installed run the following commands from windows terminal:
  
- 	echo "export DISPLAY=localhost:0.0" >> ~/.bashrc
+ 	echo "export DISPLAY=<your local ip>:0.0" >> ~/.bashrc
 	source ~/.bashrc
 	
+<strong>Disable Access Control</strong><em> must be checked</em>	
  <br />
  <br /> 
 
