@@ -375,7 +375,7 @@ apresults(){
 			IP=$(cat results/Vulns/${SESSION}/${log}.results)
 			echo "${log} ${IP}" >> results/Vulns/${SESSION}/final.results
 			echo "==========================================================================="
-			if [[ ${Y} -eq ${Z} ]] || [[ ${Y} -gt ${Z} ]]; then
+			if [[ ${Y} -eq ${Z} ]]; then
 	# cat results/Vulns/${SESSION}/*.results | sudo tee final.results
 					######################
 					######################
@@ -434,7 +434,7 @@ mchecker(){
 	TMU=''
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
-	proxychains4 sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u ${USE} -c '/console clear-history'
+	proxychains4 sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/console clear-history'
 	sudo rm -rf /opt/MkCheck/logs
 	sudo rm temp_user
 	apresults
@@ -474,7 +474,7 @@ pchecker(){
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
 	echo -e "${YLW}Clearing Target Device SSH History & Sorting Results${NC}"
-	proxychains4 sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u ${USE} -c '/console clear-history'
+	proxychains4 sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/console clear-history'
 	sudo rm -rf /opt/MkCheck/logs
 	sudo rm temp_user
 	apresults
