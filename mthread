@@ -24,6 +24,7 @@ ARGUMENT=$2
 #	mv /opt/MkCheck/files/tiks_temp.txt /opt/MkCheck/files/tiks.txt
 #fi
 
+cd /opt/MkCheck
 #########################################
 #######################
 #  Trap Control Init  #
@@ -871,6 +872,7 @@ mrun(){
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
 	echo -e "${YLW}Clearing Target Device SSH History & Sorting Results${NC}"
+	cd /opt/MkCheck
 	sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u ${USE} -c '/console clear-history'
 	sudo rm -rf /opt/MkCheck/logs
 	sudo rm temp_user
@@ -897,6 +899,7 @@ prun(){
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
 	echo -e "${YLW}Clearing Target Device SSH History & Sorting Results${NC}"
+	cd /opt/MkCheck
 	proxychains4 sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u ${USE} -c '/console clear-history'
 	sudo rm -rf /opt/MkCheck/logs
 	sudo rm temp_user
