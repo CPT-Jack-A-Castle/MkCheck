@@ -147,6 +147,9 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
 <br />
  <br />
 <img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/rsf.PNG">
+<br />
+<br />
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/winX.PNG">
 </p>
 
 
