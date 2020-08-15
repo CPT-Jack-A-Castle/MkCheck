@@ -871,6 +871,7 @@ mrun(){
 	TMU=''
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
+	#sed -i "s/${USE}/XREUSE/g" /opt/MkCheck/scripts/clear.py 
 	echo -e "${YLW}Clearing Target Device SSH History & Sorting Results${NC}"
 	cd /opt/MkCheck
 	sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/console clear-history'
