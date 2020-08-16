@@ -432,6 +432,7 @@ apresults(){
   if [[ ${SYQ} == "#" ]]; then
 		echo -e "${W}Please ensure there are no commented out lines\notherwise this check will fail${NC}"
   fi
+  resultsopt
   for log in `cat /opt/MkCheck/files/tiks_res.txt`
 		do
 			Y=$(( ${Y} + 1 ))
