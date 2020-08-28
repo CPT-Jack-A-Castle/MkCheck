@@ -273,7 +273,7 @@ session_check(){
 			echo -e "${RED}eg. ${UBLUE} a.b.c / 12.34.5${NC}"
 			read TIP
 			REP='a.b.c'
-			sudo sed -i "s/${REP}/${TIP}/g"
+			sudo sed -i "s/${REP}/${TIP}/g" /opt/MkCheck/files/tiks.txt
 			if [[ -f '/opt/MkCheck/files/small_file*' ]]; then
 				rm files/small_file*
 			fi
