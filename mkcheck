@@ -373,7 +373,9 @@ apresults(){
 		do
 			Y=$(( ${Y} + 1 ))
 			IP=$(cat results/Vulns/${SESSION}/${log}.results)
-			echo "${log} ${IP}" >> results/Vulns/${SESSION}/final.results
+			echo "${log} ${IP}" > ${log}.temp
+			cat ${log}.temp >> results/Vulns/${SESSION}/final.results
+			rm ${log}.temp
 			echo "==========================================================================="
 			if [[ ${Y} -eq ${Z} ]]; then
 	# cat results/Vulns/${SESSION}/*.results | sudo tee final.results
