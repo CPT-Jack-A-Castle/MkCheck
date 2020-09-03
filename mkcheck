@@ -429,11 +429,7 @@ apresults(){
 							cat /opt/MkCheck/results/Vulns/${SESSION}/final.results | grep ${KEY}
 					fi
 
-				  ####################
-				  ####################
-				  #  Return To Main  #
-				  ####################
-				  break
+				  mv /opt/MkCheck/results/Vulns/*.results -t /opt/MkCheck/results/Vulns/${SESSION}
 			fi
 		done
 }

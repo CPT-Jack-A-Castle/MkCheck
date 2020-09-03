@@ -9,3 +9,10 @@
 .vs/MkCheck/v16/Browse.VC.db-shm
 .vs/MkCheck/v16/Browse.VC.db-wal
 .vs/MkCheck/v16/Browse.VC.opendb
+*.cmake
+*.bin
+*.exe
+*.c
+*.obj
+*.check_cache
+*.log
