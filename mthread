@@ -133,8 +133,12 @@ edit_session(){
         read SESSION
         echo ${SESSION} >> .conf
         sed -i "s/${OUTNUM}/${INNUM}/g" files/.temp_tiks.txt
-        cp files/.temp_tiks.txt files/tiks_res.txt						# Make result targets file
-        cp files/.temp_tiks.txt files/tiks_rsf.txt						# Make routersploit targets file
+        cp files/.temp_tiks.txt files/tiks_res.txt					# Make result targets file
+		python3 scripts/get/res.py
+		rm files/tiks_res.txt
+		mv files/res.txt files/tiks_res.txt
+		rm res.txt
+        cp files/.temp_tiks.txt files/tiks_rsf.txt					# Make routersploit targets file
 	cp files/.temp_tiks.txt files/tiks.txt							# Make MikroTik targets file
 	if [[ -f '/opt/MkCheck/files/small_file*' ]]; then				# Creates split Target file for mthread
 		rm files/small_file*
@@ -190,6 +194,10 @@ fresh(){
 	echo -e "${YLW}Backup of this sessions Target file saved as ${UBLUE}.${SESSION}_tiks.txt${NC}"
 	cp files/tiks.txt files/.${SESSION}_tiks.txt
 	cp files/tiks.txt files/tiks_res.txt
+	python3 scripts/get/res.py
+	rm files/tiks_res.txt
+	mv files/res.txt files/tiks_res.txt
+	rm res.txt
 	cp files/tiks.txt files/tiks_rsf.txt
 
 	########################################################
@@ -248,6 +256,10 @@ session_choice(){
 		python3 /opt/MkCheck/files/split.py
 		cp files/tiks.txt files/.${SESSION}_tiks.txt
 		cp files/tiks.txt files/tiks_res.txt
+		python3 scripts/get/res.py
+		rm files/tiks_res.txt
+		mv files/res.txt files/tiks_res.txt
+		rm res.txt
 		cp files/tiks.txt files/tiks_rsf.txt
 	else
 		echo -e "${W}Please enter the name of the session to use:${NC}"
@@ -257,6 +269,10 @@ session_choice(){
 			rm files/small_file*
 		fi
 		python3 /opt/MkCheck/files/split.py
+		python3 scripts/get/res.py
+		rm files/tiks_res.txt
+		mv files/res.txt files/tiks_res.txt
+		rm res.txt
 	fi
 }
 
@@ -340,9 +356,17 @@ session_check(){
 		if [[ ${RS} == "a.b.c.0" ]]; then
 			sudo rm /opt/MkCheck/files/tiks_res.txt
 			cp /opt/MkCheck/files/tiks.txt /opt/MkCheck/files/tiks_res.txt
+			python3 scripts/get/res.py
+			rm files/tiks_res.txt
+			mv files/res.txt files/tiks_res.txt
+			rm res.txt
 		fi
 	else
 		cp /opt/MkCheck/files/tiks.txt /opt/MkCheck/files/tiks_res.txt
+		python3 scripts/get/res.py
+		rm files/tiks_res.txt
+		mv files/res.txt files/tiks_res.txt
+		rm res.txt
 	fi
 }
 #########################################
