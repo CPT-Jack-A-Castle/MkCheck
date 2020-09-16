@@ -1,8 +1,8 @@
 <img align="left" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet"><a href="https://www.codefactor.io/repository/github/s1l3nt78/MkCheck"><img align="right" src="https://www.codefactor.io/repository/github/s1l3nt78/MkCheck/badge" alt="CodeFactor" /></a><br/>
-<p align="center"><img align="center" src="https://img.shields.io/badge/[!]-The_Dead_Bunny_Collective-green"></p>
+<p align="center"><img align="center" src="https://img.shields.io/badge/-The_Dead_Bunny_Collective-green"></p>
 <br />
 <p align="center">
- <img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/logo.PNG" />
+ <img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/logo.png" />
 <br />
  <img align="center" src="https://img.shields.io/github/issues/s1l3nt78/MkCheck" />
  <img align="center" src="https://img.shields.io/github/forks/s1l3nt78/MkCheck" />
@@ -139,19 +139,19 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
 <h2>Images:</h2>
 <p>
 	<a><strong>Main Menu</strong></a><br />
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/main.PNG">
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/main.png">
  <br />
  <br />
 	<a><strong>MikroTik Auto-Exploiter</strong></a><br />
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/mcheck.PNG">
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/mcheck.png">
 <br />
  <br />
 	<a><strong>WinBox Authentication Bypass</strong></a><br />
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/rsf.PNG">
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/rsf.png">
 <br />
 <br />
 	<a><strong>Mthread Using Windows (MikroTik Auto-Exploitation)</strong></a><br />
-<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/winX.PNG">
+<img align="center" src="https://raw.githubusercontent.com/s1l3nt78/MkCheck/master/docs/winX.png">
 </p>
 
 
