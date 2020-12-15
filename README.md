@@ -41,8 +41,8 @@
  <br>
  Then run:
 
-	# unzip Release_v3.zip
-	# cd Release_v3
+	# unzip MkCheck
+	# cd MkCheck_3.5
 	# bash setup.sh
 
 To setup up Root Nethunter on a non-rooted android, just follow 
@@ -108,13 +108,9 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
  <br />
  <br />
 
-# Version: 3 [Mthread Still in Development]
+# Threaded Scans
 
-    The mthread script is still in development and still needs some optimization and will get 
-    rid of redundancies. As well as clean up alot of the unnecessary code.
-    mthread does NOT work in Termux
-    
- <strong><em>mthread</em></strong> script added to speed up scans.
+<strong><em>mthread</em></strong> script added to speed up scans.
  <br />
  Automatic Clean-Up of SSH command history done in order to remain hidden.
  <br />
