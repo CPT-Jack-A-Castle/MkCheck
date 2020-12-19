@@ -1,4 +1,4 @@
-<img align="left" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet"><a href="https://www.codefactor.io/repository/github/7dbc/MkCheck"><img align="right" src="https://www.codefactor.io/repository/github/s1l3nt78/MkCheck/badge" alt="CodeFactor" /></a><br/>
+<img align="left" src="https://img.shields.io/badge/Author-s1l3nt78-blueviolet"><a href="https://www.codefactor.io/repository/github/7dbc/mkcheck/badge"><img align="right" src="https://www.codefactor.io/repository/github/s1l3nt78/MkCheck/badge" alt="CodeFactor" /></a><br/>
 <p align="center"><img align="center" src="https://img.shields.io/badge/-The_Dead_Bunny_Collective-green"></p>
 <br />
 <p align="center">
