@@ -30,6 +30,16 @@
  it be used for any illegal or illicit purposes. The author
  takes no responsibility for any damages that may be caused
  by the software in this repository.
+ 
+# Installation
+
+	# Oneliner Deb package install:
+	$ wget https://github.com/s1l3nt78/MkCheck/releases/download/v4/MkCheck_4.deb; sudo dpkg -i MkCheck_4.deb; mthread
+	
+	# Git install:
+	$ git clone https://github.com/s1l3nt78/MkCheck
+	$ cd MkCheck
+	$ sudo bash setup.sh
 
 # Termux
 
@@ -37,14 +47,6 @@
  <br>
  Otherwise Nethunter (<strong><em>with chroot</em> on a non-rooted device</strong>) works as well, without any extra config.
  <br>
- For Termux you should download the release from <a href="https://github.com/s1l3nt78/MkCheck/releases/download/v3_1/Release_v3.zip">here</a>.
- <br>
- Then run:
-
-	# unzip MkCheck
-	# cd MkCheck_3.5
-	# bash setup.sh
-
 To setup up Root Nethunter on a non-rooted android, just follow
 <br>
 instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-Nethunter-to-run-root-(without-rooted-device)">here</a>.
@@ -54,13 +56,13 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
 
   MCheck is used to check MikroTik Routers for:
   <br />
-     <em>+winbox_auth_bypass_creds_disclosure&ensp; -&ensp;Affected Versions: <strong>6.29</strong> to <strong>6.42</strong>
+     <em>+<strong>winbox_auth_bypass_creds_disclosure</strong>&ensp; -&ensp;Affected Versions: <strong>6.29</strong> to <strong>6.42</strong>
   <br />
-     +routeros_jailbreak&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: <strong>2.9.8</strong> to <strong>6.41rc56</strong>
+     +<strong>routeros_jailbreak</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: <strong>2.9.8</strong> to <strong>6.41rc56</strong>
  <br />
-	 +Chimney-Blue&emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: Up to <strong>6.41.2</strong>
+	 +<strong>Chimney-Blue</strong>&emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: Up to <strong>6.41.2</strong>
 	<br />
- +ByTheWay (<em>CVE-2018-14847</em>)&emsp;&emsp;&emsp;&ensp; -&ensp;Affected Versions: <strong>* Longterm: 6.30.1</strong> to <strong>6.40.7</strong></em><br />
+ +<strong>ByTheWay</strong> (<em>CVE-2018-14847</em>)&emsp;&emsp;&emsp;&ensp; -&ensp;Affected Versions: <strong>* Longterm: 6.30.1</strong> to <strong>6.40.7</strong></em><br />
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>* Stable: 6.29</strong> to <strong>6.42.0</strong><br />
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>* Beta: 6.29rc1</strong> to <strong>6.43rc3</strong><br />
 </em>
