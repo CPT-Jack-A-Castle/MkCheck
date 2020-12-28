@@ -344,7 +344,7 @@ while getopts "12345abcde" options; do            	            # Loop: Get the n
             m51
             #apresults
             ;;
-        
+
         2)
             m102
             #apresults
@@ -369,7 +369,7 @@ while getopts "12345abcde" options; do            	            # Loop: Get the n
             p51
             #apresults
             ;;
-        
+
         b)
             p102
             #apresults

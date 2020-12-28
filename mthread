@@ -768,7 +768,7 @@ rtsploit(){
 	#  winbox_auth_bypass_creds_disclosure  #
 	#########################################
 	xterm -e sudo bash scripts/rtsploit.sh -a &
-	
+
 	########################
 	#  routeros_jailbreak  #
 	########################
@@ -778,6 +778,26 @@ rtsploit(){
 	echo -e "${ORNG}When both xterm windows are done, please hit ${YLW}enter${NC}"
 	read ENDRSF
 	main
+}
+
+################
+# Chimney-Blue #
+################
+bluechimney(){
+  echo  -e "${YLW}Please enter the target IP${NC}"
+  read CBIP
+  echo -e "${YLW}Please enter the command to be run${NC}"
+  read CBCMD
+  echo -e "${YLW}Please select the target architecture:${NC}"
+  echo -e "${ORNG}1. ${YLW}x86 ${NC}"
+  echo -e "${ORNG}2. ${YLW}Mips ${NC}"
+  read CBARC
+  if [[ ${CBARC} == "1" ]]; then
+    CBS='scripts/ChimneyBlue_x86.py'
+  else
+    CBS='scripts/ChimneyBlue_mips.py'
+  fi
+  python3 ${CBS} ${CBIP} ${CBCMD}
 }
 
 ######################################################
@@ -894,7 +914,7 @@ mrun(){
 	TMU=''
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
-	#sed -i "s/${USE}/XREUSE/g" /opt/MkCheck/scripts/clear.py 
+	#sed -i "s/${USE}/XREUSE/g" /opt/MkCheck/scripts/clear.py
 	echo -e "${YLW}Clearing Target Device SSH History & Sorting Results${NC}"
 	cd /opt/MkCheck
 	sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/console clear-history'
@@ -955,12 +975,13 @@ main(){
 	echo -e "${RED}1. ${LGRY}MikroTik Auto-EX"
 	echo -e "${RED}2. ${LGRY}RouterSploit Vuln Check"
 	echo -e "${RED}3. ${LGRY}ByTheWay BackDoor Check"
-  	echo -e "${ORNG}4. ${LGRY}nMap Port Scan"
-	echo -e "${LP}5. ${LGRY}Change Session"
-  	echo -e "${LP}6. ${LGRY}Change Credential Values"
-	echo -e "${LP}7. ${LGRY}Clear all previous sessions.${NC}"
-	echo -e "${LCYN}8. ${LGRY}Update MkCheck"
-	echo -e "${LGRY}9. Exit${NC}"
+  echo -e "${RED}4. ${LGRY}Chimney-Blue SMB BufferOverflow"
+  echo -e "${ORNG}5. ${LGRY}nMap Port Scan"
+	echo -e "${LP}6. ${LGRY}Change Session"
+  echo -e "${LP}7. ${LGRY}Change Credential Values"
+	echo -e "${LP}8. ${LGRY}Clear all previous sessions.${NC}"
+	echo -e "${LCYN}9. ${LGRY}Update MkCheck"
+	echo -e "${LGRY}10. Exit${NC}"
 	echo ""
 	echo -e "${YLW}Which module would you like to use?${NC}"
 	read MODULE
@@ -978,11 +999,13 @@ main(){
 	elif [[ ${MODULE} == "3" ]]; then
 		bytheway
 	elif [[ ${MODULE} == "4" ]]; then
+    bluechimney
+  elif [[ ${MODULE} == "5" ]]; then
 		mkmap
-	elif [[ ${MODULE} == "5" ]]; then
+	elif [[ ${MODULE} == "6" ]]; then
 		session_choice
 		main
-	elif [[ ${MODULE} == "6" ]]; then
+	elif [[ ${MODULE} == "7" ]]; then
 		echo -e "${W}Please enter the username to to insert${NC}"
 		read USR
 		echo -e "${W}Please enter the password to to insert${NC}"
@@ -1001,7 +1024,7 @@ main(){
 		sed -i "s/${PASS}/password = \"${PW}\"/g" scripts/miko/m153.py
 		sed -i "s/${PASS}/password = \"${PW}\"/g" scripts/miko/m204.py
 		sed -i "s/${PASS}/password = \"${PW}\"/g" scripts/miko/m255.py
-	elif [[ ${MODULE} == "7" ]]; then
+	elif [[ ${MODULE} == "8" ]]; then
 		sudo rm -rf .conf files/.*_tiks.txt
 		echo -e "${W}Would you like to create a ${URED}n${NC}${W}ew session or ${URED}e${NC}${W}xit?${YLW}(n/e)${NC}"
 		read MOD
@@ -1011,10 +1034,10 @@ main(){
 		else
 			exit 2
 		fi
-  	elif [[ ${MODULE} == "8" ]]; then
+  elif [[ ${MODULE} == "9" ]]; then
     	update
 		main
-	elif [[ ${MODULE} == "9" ]]; then
+	elif [[ ${MODULE} == "10" ]]; then
 		exit 2
 	else
 		echo -e "${URED}You have selected an invalid option${NC}"
@@ -1052,7 +1075,7 @@ while getopts "ur:m:p:n:b:h" options; do            	            # Loop: Get the
             update
 			main
             ;;
-		
+
 		r)
 			cp files/.${ARGUMENT}_tiks.txt files/tiks.txt
 			cp files/.${ARGUMENT}_tiks.txt files/tiks_res.txt

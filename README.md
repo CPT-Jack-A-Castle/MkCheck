@@ -8,8 +8,8 @@
  <img align="center" src="https://img.shields.io/github/forks/s1l3nt78/MkCheck" />
  <img align="center" src="https://img.shields.io/github/stars/s1l3nt78/MkCheck" />
  <br />
- <img align="center" src="https://img.shields.io/badge/Codename-JailBoxer-orange" />
- <img align="center" src="https://img.shields.io/badge/Version-3.5-red" />
+ <img align="center" src="https://img.shields.io/badge/Codename-BlueChimney-orange" />
+ <img align="center" src="https://img.shields.io/badge/Version-4-red" />
 </p>
 <br />
 <br />
@@ -25,15 +25,15 @@
 
 # *IMPORTANT*
 
- This software should not be used within any system or 
- network for which you do not have permission, nor should 
+ This software should not be used within any system or
+ network for which you do not have permission, nor should
  it be used for any illegal or illicit purposes. The author
  takes no responsibility for any damages that may be caused
  by the software in this repository.
 
 # Termux
 
- MkCheck works well in Termux, <strong>provided you are able to run <em>root</em></strong>. 
+ MkCheck works well in Termux, <strong>provided you are able to run <em>root</em></strong>.
  <br>
  Otherwise Nethunter (<strong><em>with chroot</em> on a non-rooted device</strong>) works as well, without any extra config.
  <br>
@@ -45,7 +45,7 @@
 	# cd MkCheck_3.5
 	# bash setup.sh
 
-To setup up Root Nethunter on a non-rooted android, just follow 
+To setup up Root Nethunter on a non-rooted android, just follow
 <br>
 instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-Nethunter-to-run-root-(without-rooted-device)">here</a>.
 
@@ -60,7 +60,9 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
  <br />
  +ByTheWay (<em>CVE-2018-14847</em>)&emsp;&emsp;&emsp;&ensp; -&ensp;Affected Versions: <strong>* Longterm: 6.30.1</strong> to <strong>6.40.7</strong></em><br />
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>* Stable: 6.29</strong> to <strong>6.42.0</strong><br />
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>* Beta: 6.29rc1</strong> to <strong>6.43rc3</strong></em>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>* Beta: 6.29rc1</strong> to <strong>6.43rc3</strong><br />
+  +Chimney-Blue&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: Up to <strong>6.41.2</strong>
+</em>
   <br />
   MkCheck matches IP address to WiFi Access Point Names
   <br />
@@ -68,7 +70,7 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
   <br />
   Which must be entered into <strong><em>scripts/miko.py</em></strong> for MkCheck's auto search module to correctly work.
   <br />
-  ByTheWay Root Shell Check The exploit leverages the path traversal vulnerability CVE-2018-14847 to extract the admin password and create  an "option" package 
+  ByTheWay Root Shell Check The exploit leverages the path traversal vulnerability CVE-2018-14847 to extract the admin password and create  an "option" package
   <br />
   to enable the developer backdoor. Post exploitation the attacker can connect to Telnet or SSH using the root user "devel" with the admin's password.
   <br />
@@ -124,13 +126,13 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
  Download VcXsrv from <a href="https://ufpr.dl.sourceforge.net/project/vcxsrv/vcxsrv/1.20.8.1/vcxsrv-64.1.20.8.1.installer.exe">here.</a>
  <br />
  Once installed run the following commands from windows terminal:
- 
+
  	echo "export DISPLAY=<your local ip>:0.0" >> ~/.bashrc
 	source ~/.bashrc
-	
-<strong>Disable Access Control</strong><em> must be checked</em>	
+
+<strong>Disable Access Control</strong><em> must be checked</em>
  <br />
- <br /> 
+ <br />
 
 <h2>Images:</h2>
 <p>
