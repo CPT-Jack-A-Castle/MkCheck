@@ -58,10 +58,11 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
   <br />
      +routeros_jailbreak&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: <strong>2.9.8</strong> to <strong>6.41rc56</strong>
  <br />
+	 +Chimney-Blue&emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: Up to <strong>6.41.2</strong>
+	<br />
  +ByTheWay (<em>CVE-2018-14847</em>)&emsp;&emsp;&emsp;&ensp; -&ensp;Affected Versions: <strong>* Longterm: 6.30.1</strong> to <strong>6.40.7</strong></em><br />
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>* Stable: 6.29</strong> to <strong>6.42.0</strong><br />
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>* Beta: 6.29rc1</strong> to <strong>6.43rc3</strong><br />
-  +Chimney-Blue&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: Up to <strong>6.41.2</strong>
 </em>
   <br />
   MkCheck matches IP address to WiFi Access Point Names
