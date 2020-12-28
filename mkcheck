@@ -16,6 +16,30 @@ URED='\033[4;31m'
 LCYN='\033[1;36m'
 Z=1
 ARGUMENT=$2
+
+##############################
+# ! # First Time Deb Install #
+##############################
+FIRSTTIME=1
+###
+#first_inst(){
+#        echo -e "\n${LGRY}####################################"
+#        echo -e "# ${NC}[${RED}!${NC}]${ORNG}NOTE:${YLW} Running Initial Install ${LGRY}#${NC}"
+#        echo -e "${LGRY}####################################${NC}\n"
+#        sudo bash /opt/MkCheck/setup.sh
+        ##
+        # Initial Install
+        ##
+#        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/MkCheck/mkcheck
+#        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/MkCheck/mthread
+#        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/mkcheck
+#        sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/mthread
+#}
+
+#if [[ ${FIRSTTIME} == 1 ]]; then
+#        first_inst
+#fi
+
 cd /opt/MkCheck
 #########################################
 #######################

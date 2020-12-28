@@ -20,6 +20,14 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+###################
+# Initial Install
+##-----------------
+#
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /opt/sifter/sifter
+sudo sed -i "s/FIRSTTIME=1/FIRST=DONE/g" /usr/sbin/sifter
+##
+
 # Apt Dependancies
 sudo apt update
 sudo apt-get install figlet python python3 python-tk python3-pip figlet python3.8 tor proxychains4 libboost-all-dev cmake
