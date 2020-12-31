@@ -983,7 +983,7 @@ main(){
 	echo -e "${BRED}"
 	cd /opt/MkCheck
 	python3 files/banner.py
-	echo -e "${ORNG}Codename: ${LCYN}JailBoxer"
+	echo -e "${ORNG}Codename: ${LCYN}BlueChimney"
 	echo -e "${ORNG}by ${LCYN}s1l3nt78${NC}"
 	echo ""
 	echo -e "${LGRY}Mikrotik WinBox Auth Bypass  - ${W}Versions ${YLW}6.29${NC} ${W}to${NC} ${YLW}6.42"
