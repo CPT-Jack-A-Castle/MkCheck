@@ -23,6 +23,10 @@
 <br>
 <br>
 
+# Additions
+- ChimneyBlue SMB BufferOverflow Exploit (x86/mips)
+- RouterOS Jailbreak support for Mikrotik versions 2 - 6.44.3
+
 # *IMPORTANT*
 
  This software should not be used within any system or
@@ -30,12 +34,12 @@
  it be used for any illegal or illicit purposes. The author
  takes no responsibility for any damages that may be caused
  by the software in this repository.
- 
+
 # Installation
 
 	# Oneliner Deb package install:
 	$ wget https://github.com/s1l3nt78/MkCheck/releases/download/v4/MkCheck_4.deb; sudo dpkg -i MkCheck_4.deb; mthread
-	
+
 	# Git install:
 	$ git clone https://github.com/s1l3nt78/MkCheck
 	$ cd MkCheck
