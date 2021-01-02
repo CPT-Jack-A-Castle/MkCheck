@@ -797,9 +797,28 @@ rtsploit(){
 ######################
 # RouterOS JailBreak #
 ######################
+stagetwo(){
+  echo -e "${YLW}Are you ready for stage 2? (y/n)${NC}"
+  read QSTAGE
+  if [[ ${QSTAGE} == "y" ]]; then
+    sudo bash second_stage.sh
+  fi
+}
+##
 jailbreaker(){
-  cd /opt/MkCheck/scripts/JailBreak
-  sudo bash exploit_full.sh
+  echo -e "${YLW}Is the target routers OS version 6.41 or ${W}n${YLW}ewer / 6.40 or ${W}o${NC}lder?\n${RED}Please ensure the correct version is selected!${NC}"
+  read OSV
+  if [[ ${OSV} == "o" ]]; then
+    cd /opt/MkCheck/scripts/JailBreak/old
+    sudo bash exploit_full.sh
+  elif [[ ${OSV} == "n" ]]; then
+    cd /opt/MkCheck/scripts/JailBreak/new
+    sudo bash make_usb.sh
+    stagetwo
+  else
+    echo -e "${RED}Invalid option, please select (n/o)${NC}"
+    stagetwo
+  fi
 }
 
 ################
