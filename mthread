@@ -790,17 +790,16 @@ rtsploit(){
 	#########################################
 	#  winbox_auth_bypass_creds_disclosure  #
 	#########################################
-	xterm -e sudo bash scripts/rtsploit.sh -a &
-
-	########################
-	#  routeros_jailbreak  #
-	########################
-	if [[ ${OSJB} == "y" ]]; then
-		xterm -e bash scripts/rtsploit.sh -j &
-	fi
-	echo -e "${ORNG}When both xterm windows are done, please hit ${YLW}enter${NC}"
-	read ENDRSF
+	xterm -e sudo bash scripts/rtsploit.sh -a
 	main
+}
+
+######################
+# RouterOS JailBreak #
+######################
+jailbreaker(){
+  cd /opt/MkCheck/scripts/JailBreak
+  sudo bash exploit_full.sh
 }
 
 ################
@@ -999,12 +998,13 @@ main(){
 	echo -e "${RED}2. ${LGRY}RouterSploit Vuln Check"
 	echo -e "${RED}3. ${LGRY}ByTheWay BackDoor Check"
   echo -e "${RED}4. ${LGRY}Chimney-Blue SMB BufferOverflow"
-  echo -e "${ORNG}5. ${LGRY}nMap Port Scan"
-	echo -e "${LP}6. ${LGRY}Change Session"
-  echo -e "${LP}7. ${LGRY}Change Credential Values"
-	echo -e "${LP}8. ${LGRY}Clear all previous sessions.${NC}"
-	echo -e "${LCYN}9. ${LGRY}Update MkCheck"
-	echo -e "${LGRY}10. Exit${NC}"
+  echo -e "${RED}5. ${LGRY}RouterOS JailBreak"
+  echo -e "${ORNG}6. ${LGRY}nMap Port Scan"
+	echo -e "${LP}7. ${LGRY}Change Session"
+  echo -e "${LP}8. ${LGRY}Change Credential Values"
+	echo -e "${LP}9. ${LGRY}Clear all previous sessions.${NC}"
+	echo -e "${LCYN}10. ${LGRY}Update MkCheck"
+	echo -e "${LGRY}11. Exit${NC}"
 	echo ""
 	echo -e "${YLW}Which module would you like to use?${NC}"
 	read MODULE
@@ -1024,11 +1024,13 @@ main(){
 	elif [[ ${MODULE} == "4" ]]; then
     bluechimney
   elif [[ ${MODULE} == "5" ]]; then
+    jailbreaker
+  elif [[ ${MODULE} == "6" ]]; then
 		mkmap
-	elif [[ ${MODULE} == "6" ]]; then
+	elif [[ ${MODULE} == "7" ]]; then
 		session_choice
 		main
-	elif [[ ${MODULE} == "7" ]]; then
+	elif [[ ${MODULE} == "8" ]]; then
 		echo -e "${W}Please enter the username to to insert${NC}"
 		read USR
 		echo -e "${W}Please enter the password to to insert${NC}"
@@ -1047,7 +1049,7 @@ main(){
 		sed -i "s/${PASS}/password = \"${PW}\"/g" scripts/miko/m153.py
 		sed -i "s/${PASS}/password = \"${PW}\"/g" scripts/miko/m204.py
 		sed -i "s/${PASS}/password = \"${PW}\"/g" scripts/miko/m255.py
-	elif [[ ${MODULE} == "8" ]]; then
+	elif [[ ${MODULE} == "9" ]]; then
 		sudo rm -rf .conf files/.*_tiks.txt
 		echo -e "${W}Would you like to create a ${URED}n${NC}${W}ew session or ${URED}e${NC}${W}xit?${YLW}(n/e)${NC}"
 		read MOD
@@ -1057,10 +1059,10 @@ main(){
 		else
 			exit 2
 		fi
-  elif [[ ${MODULE} == "9" ]]; then
+  elif [[ ${MODULE} == "10" ]]; then
     	update
 		main
-	elif [[ ${MODULE} == "10" ]]; then
+	elif [[ ${MODULE} == "11" ]]; then
 		exit 2
 	else
 		echo -e "${URED}You have selected an invalid option${NC}"

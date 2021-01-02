@@ -571,8 +571,6 @@ bytheway(){
 rtsploit(){
 	cd /opt/MkCheck
 	python3 scripts/get/rsf.py
-	echo -e "${ORNG}Would you like to run the RouterOS JailBreak check aswell? (y/n)${NC}"
-	read OSJB
 	for name in `cat /opt/MkCheck/files/rsf.txt`
 		do
 			#########################################
@@ -585,22 +583,17 @@ rtsploit(){
 			echo "${WB}" >> /opt/MkCheck/results/RSF/${SESSION}/${name}.results
 			echo "${WB}" >> /opt/MkCheck/results/RSF/${SESSION}/final.results
 			echo "${WB}"
-			########################
-			########################
-			#  routeros_jailbreak  #
-			########################
-			if [[ ${OSJB} == "y" ]]; then
-				cd /root/routersploit
-				JAIL=$(sudo python3 rsf.py -m exploits/routers/mikrotik/routeros_jailbreak -s "target ${name}")
-				echo "${JAIL}" >> /opt/MkCheck/results/RSF/${SESSION}/${name}.results
-				echo "${JAIL}" >> /opt/MkCheck/results/RSF/${SESSION}/final.results
-				echo "${JAIL}"
-				echo "======================================================================" >> /opt/MkCheck/results/RSF/${SESSION}/final.results
-			fi
 		done
 }
 
-################
+######################
+# RouterOS JailBreak #
+######################
+jailbreaker(){
+  cd /opt/MkCheck/scripts/JailBreak
+  sudo bash exploit_full.sh
+}
+
 # Chimney-Blue #
 ################
 bluechimney(){
@@ -736,12 +729,13 @@ main(){
 	echo -e "${RED}2. ${LGRY}RouterSploit Vuln Check"
 	echo -e "${RED}3. ${LGRY}ByTheWay BackDoor Check"
   echo -e "${RED}4. ${LGRY}Chimney Blue SMB BufferOverflow"
-  	echo -e "${ORNG}5. ${LGRY}nMap Port Scan"
-	echo -e "${LP}6. ${LGRY}Change Session"
-  	echo -e "${LP}7. ${LGRY}Change Credential Values"
-	echo -e "${LP}8. ${LGRY}Clear all previous sessions.${NC}"
-	echo -e "${LCYN}9. ${LGRY}Update MkCheck"
-	echo -e "${LGRY}10. Exit${NC}"
+  echo -e "${RED}5. ${LGRY}RouterOS JailBreak"
+  	echo -e "${ORNG}6. ${LGRY}nMap Port Scan"
+	echo -e "${LP}7. ${LGRY}Change Session"
+  	echo -e "${LP}8. ${LGRY}Change Credential Values"
+	echo -e "${LP}9. ${LGRY}Clear all previous sessions.${NC}"
+	echo -e "${LCYN}10. ${LGRY}Update MkCheck"
+	echo -e "${LGRY}11. Exit${NC}"
 	echo ""
 	echo -e "${YLW}Which module would you like to use?${NC}"
 	read MODULE
@@ -761,11 +755,13 @@ main(){
 	elif [[ ${MODULE} == "4" ]]; then
     bluechimney
   elif [[ ${MODULE} == "5" ]]; then
+    jailbreaker
+  elif [[ ${MODULE} == "6" ]]; then
 		mkmap
-	elif [[ ${MODULE} == "6" ]]; then
+	elif [[ ${MODULE} == "7" ]]; then
 		session_choice
 		main
-	elif [[ ${MODULE} == "7" ]]; then
+	elif [[ ${MODULE} == "8" ]]; then
 		echo -e "${W}Please enter the username to to insert${NC}"
 		read USR
 		echo -e "${W}Please enter the password to to insert${NC}"
@@ -776,7 +772,7 @@ main(){
 		sed -i "s/${PASS}/password = \"${PW}\"/g" scripts/miko.py
 		ZET=$(cat /opt/MkCheck/scripts/clear.py | grep "ZTE=")
 		sed -i "s/${ZET}/ZTE='${PW}'/g" scripts/clear.py
-	elif [[ ${MODULE} == "8" ]]; then
+	elif [[ ${MODULE} == "9" ]]; then
 		sudo rm -rf .conf files/.*_tiks.txt
 		echo -e "${W}Would you like to create a ${URED}n${NC}${W}ew session or ${URED}e${NC}${W}xit?${YLW}(n/e)${NC}"
 		read MOD
@@ -786,10 +782,10 @@ main(){
 		else
 			exit 2
 		fi
-  elif [[ ${MODULE} == "9" ]]; then
+  elif [[ ${MODULE} == "10" ]]; then
     	update
 		main
-	elif [[ ${MODULE} == "10" ]]; then
+	elif [[ ${MODULE} == "11" ]]; then
 		exit 2
 	else
 		echo -e "${URED}You have selected an invalid option${NC}"
