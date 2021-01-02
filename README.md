@@ -65,7 +65,7 @@ https://www.youtube.com/watch?v=w4szP0lCIPo
   <br />
      <em>+<strong>winbox_auth_bypass_creds_disclosure</strong>&ensp; -&ensp;Affected Versions: <strong>6.29</strong> to <strong>6.42</strong>
   <br />
-     +<strong>routeros_jailbreak</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: <strong>2.9.8</strong> to <strong>6.41rc56</strong>
+     +<strong>routeros_jailbreak</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: <strong>2.9.8</strong> to <strong>6.44.3</strong>
  <br />
 	 +<strong>Chimney-Blue</strong>&emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&ensp;Affected Versions: Up to <strong>6.41.2</strong>
 	<br />
