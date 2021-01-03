@@ -45,7 +45,7 @@ if args.threads:
 
 ## SET USER / PASS ##
 site_user = 'admin' #getpass.getuser()
-site_passwd = 'p3rs1anf1r3'
+site_passwd = ''
 if args.site_user:
     site_user = args.site_user
 
