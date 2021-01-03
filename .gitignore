@@ -16,3 +16,4 @@
 *.obj
 *.check_cache
 *.log
+scripts/clear.2.py
