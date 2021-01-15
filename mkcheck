@@ -492,7 +492,9 @@ mchecker(){
 	TMU=''
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
-	proxychains4 sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/console clear-history'
+	sudo python2 scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/system logging action set memory-lines=1'
+  sudo python2 scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/system logging action set memory-lines=1000'
+  sudo python2 scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/system reboot'
 	sudo rm -rf /opt/MkCheck/logs
 	sudo rm temp_user
 	apresults
@@ -532,7 +534,9 @@ pchecker(){
 	sed -i "s/${TMI}/${TMU}/g" temp_user
 	USE=$(cat temp_user)
 	echo -e "${YLW}Clearing Target Device SSH History & Sorting Results${NC}"
-	proxychains4 sudo python scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/console clear-history'
+  proxychains4 sudo python2 scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/system logging action set memory-lines=1'
+  proxychains4 sudo python2 scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/system logging action set memory-lines=1000'
+  proxychains4 sudo python2 scripts/clear.py -f /opt/MkCheck/files/tiks.txt -u admin -c '/system reboot'
 	sudo rm -rf /opt/MkCheck/logs
 	sudo rm temp_user
 	apresults
