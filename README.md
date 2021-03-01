@@ -57,7 +57,9 @@ instructions from <a href="https://github.com/s1l3nt78/MkCheck/wiki/Installing-N
 
 # Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w4szP0lCIPo?start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<summary>Click to goto Demo Video</summary>
+	
+[![Demo Video](https://img.youtube.com/vi/w4szP0lCIPo/0.jpg)](https://www.youtube.com/watch?v=w4szP0lCIPo)
 
 # Functions
 
